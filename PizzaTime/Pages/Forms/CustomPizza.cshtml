@@ -1,0 +1,54 @@
+﻿@page "CustomPizza"
+@model PizzaTime.Pages.Forms.CustomPizzaModel
+@{
+}
+
+<h2>Custom Pizza Builder</h2>
+
+<section class="d-flex flex-column text-center alert-light mx-auto my-5">
+    <h5>Build Your Pizza!</h5>
+    <form method="post" class="d-flex flex-column alert-light mx-auto my-3 rounded-3 col-4">
+
+        <input asp-for="Pizza.PizzaName" type="text" placeholder="Name for your order..." class="mb-3"/>
+        <div class="form-check-inline">
+            <label>Red Sauce</label>
+            <input asp-for="Pizza.RedSauce" type="radio" name="sauce" value="RedSauce"/>
+        </div>
+        <div class="form-check-inline">
+            <label>White Sauce</label>
+            <input asp-for="Pizza.WhiteSauce" type="radio" name="sauce" value="WhiteSauce"/>
+        </div>
+
+        <div class="form-check-inline">
+            <label>Mozzarella</label>
+            <input asp-for="Pizza.Mozzarella" type="checkbox"/>
+        </div>
+
+        <div class="form-check-inline">
+            <label>Pepperoni</label>
+            <input asp-for="Pizza.Pepperoni" type="checkbox"/>
+        </div>
+
+        <div class="form-check-inline">
+            <label>Mushrooms</label>
+            <input asp-for="Pizza.Mushrooms" type="checkbox"/>
+        </div>
+
+        <div class="form-check-inline">
+            <label>Pineapple</label>
+            <input asp-for="Pizza.Pineapple" type="checkbox"/>
+        </div>
+
+        <div class="form-check-inline">
+            <label>Spinach</label>
+            <input asp-for="Pizza.Spinach" type="checkbox"/>
+        </div>
+
+        <div class="form-check-inline">
+            <label>Onions</label>
+            <input asp-for="Pizza.Onions" type="checkbox"/>
+        </div>
+
+        <button class="btn btn-primary mt-4 ">Place Order</button>
+    </form>
+</section>

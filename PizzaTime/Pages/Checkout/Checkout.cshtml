@@ -1,0 +1,19 @@
+﻿@page "Checkout"
+@model PizzaTime.Pages.Checkout.CheckoutModel
+@{
+}
+
+<h2>Complete your Order</h2>
+
+@{
+    var imgPath = "~/images/Pizzas/" + Model.ImageTitle + ".png";
+}
+
+<div class="align-content-center">
+    <div class="col-3 mx-auto mb-5">
+        <img src="@imgPath" class="w-100" asp-append-version="true" alt="your pizza"/>
+        <p>Order Name: @Model.PizzaName</p>
+        <p><strong>Order Total: $@Model.PizzaPrice</strong></p>
+        <a asp-area="" asp-page="OrderConfirmation" class="btn btn-primary">Place Order</a>
+        </div>
+</div>
